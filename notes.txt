@@ -1,0 +1,13 @@
+INSERT
+The insert function does not scale well. It seems to have resonable times with smaller arrays.
+This has to do with the fact that this runtime is linear, or O(n). 
+But once you get into array sizes of 1,000 + elements it really slows down. 
+
+
+APPEND
+The append function appears to scare much better. As it doesn't build on itself, so the runtime is constant,
+or O(1).
+
+The insert function appears to take hunderes of times longer then the append.
+This is because insert has to move and modify each new element.
+Whereas the append function only has to modify and edit the last slot.
